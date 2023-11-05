@@ -1007,6 +1007,9 @@ importers:
       storybook-addon-misskey-theme:
         specifier: github:misskey-dev/storybook-addon-misskey-theme
         version: github.com/misskey-dev/storybook-addon-misskey-theme/cf583db098365b2ccc81a82f63ca9c93bc32b640(@storybook/blocks@8.0.0-beta.2)(@storybook/components@8.0.0-beta.2)(@storybook/core-events@8.0.0-beta.2)(@storybook/manager-api@8.0.0-beta.2)(@storybook/preview-api@8.0.0-beta.2)(@storybook/theming@8.0.0-beta.2)(@storybook/types@8.0.0-beta.2)(react-dom@18.2.0)(react@18.2.0)
+      temml:
+        specifier: 0.10.17
+        version: 0.10.17
       vite-plugin-turbosnap:
         specifier: 1.0.3
         version: 1.0.3
@@ -18219,6 +18222,12 @@ packages:
     dependencies:
       memoizerific: 1.11.3
     dev: true
+
+  /temml@0.10.17:
+    resolution: {integrity: sha512-qQ484wnP/dPQmEjk4TwxqOe+Epwh0rdFYjg1eCSDBN8NOXimjj+kl2m8kio+/F2aeuBepM0xtGwRO/jRGmt3lQ==}
+    engines: {node: '>=18.13.0'}
+    dev: true
+
 
   /temp-dir@2.0.0:
     resolution: {integrity: sha512-aoBAniQmmwtcKp/7BzsH8Cxzv8OL736p7v1ihGb5e9DJ9kTwGWHrQrVB5+lfVDzfGrdRzXch+ig7LHaY1JTOrg==}
