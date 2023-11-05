@@ -6,6 +6,7 @@
 import { VNode, h, SetupContext } from 'vue';
 import * as mfm from 'mfm-js';
 import * as Misskey from 'misskey-js';
+import temml from 'temml/dist/temml.mjs';
 import MkUrl from '@/components/global/MkUrl.vue';
 import MkTime from '@/components/global/MkTime.vue';
 import MkLink from '@/components/MkLink.vue';
@@ -432,11 +433,15 @@ export default function(props: MfmProps, context: SetupContext<MfmEvents>) {
 			}
 
 			case 'mathInline': {
-				return [h('code', token.props.formula)];
+				const ret = document.createElement('span');
+				temml.render(token.props.formula, ret);
+				return [h('span', { innerHTML: ret.innerHTML })];
 			}
 
 			case 'mathBlock': {
-				return [h('code', token.props.formula)];
+				const ret = document.createElement('div');
+				temml.render(token.props.formula, ret, { displayMode: true });
+				return [h('div', { innerHTML: ret.innerHTML })];
 			}
 
 			case 'search': {
